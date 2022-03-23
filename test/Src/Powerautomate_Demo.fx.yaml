@@ -61,12 +61,3 @@ Powerautomate_Demo As screen:
         Y: =493
         ZIndex: =6
 
-    Checkbox1 As checkbox:
-        Height: =85
-        Size: =21
-        Text: ="Option"
-        Width: =280
-        X: =62
-        Y: =727
-        ZIndex: =7
-

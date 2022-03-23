@@ -43,7 +43,6 @@
     "Button4": 84,
     "Camera1": 169,
     "Camera1_1": 185,
-    "Checkbox1": 193,
     "Circle1": 131,
     "Circle1_1": 53,
     "Close_btn": 107,
@@ -192,7 +191,7 @@
     "Title7": 95
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "03/23/2022 13:11:24",
+  "HeaderLastSavedDateTimeUTC": "03/23/2022 13:12:00",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
@@ -242,14 +241,13 @@
   "OrderXMLTemplate": {
     "barcodeScanner": 3,
     "button": 0,
-    "camera": 11,
-    "checkbox": 8,
+    "camera": 10,
     "circle": 7,
-    "dropdown": 9,
+    "dropdown": 8,
     "gallery": 5,
     "icon": 6,
-    "image": 10,
-    "inkControl": 12,
+    "image": 9,
+    "inkControl": 11,
     "label": 2,
     "rectangle": 1,
     "text": 4
@@ -297,7 +295,6 @@
     "Button4": 158,
     "Camera1": 100,
     "Camera1_1": 115,
-    "Checkbox1": 0,
     "Circle1": 46,
     "Circle1_1": 66,
     "Close_btn": 3,
