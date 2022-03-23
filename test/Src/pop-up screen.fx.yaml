@@ -1,0 +1,209 @@
+"'pop-up screen' As screen":
+
+    back_btn_7 As button:
+        Align: =Align.Left
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =57
+        Size: =24
+        Text: ="< Back"
+        Width: =135
+        X: =6
+        Y: =22
+        ZIndex: =1
+
+    Close_btn_7 As button:
+        Align: =Align.Right
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =57
+        Size: =24
+        Text: ="X Close"
+        Width: =152
+        X: =470
+        Y: =22
+        ZIndex: =2
+
+    Mytask_btn_7 As button:
+        Align: =Align.Left
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =57
+        Size: =24
+        Text: ="MyTask"
+        Width: =170
+        X: =26
+        Y: =1059
+        ZIndex: =3
+
+    Status_btn_7 As button:
+        Align: =Align.Left
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =65
+        Size: =24
+        Text: ="Status"
+        Width: =145
+        X: =477
+        Y: =1055
+        ZIndex: =5
+
+    BarcodeScanner1_8 As barcodeScanner:
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        Size: =24
+        Text: ="Scan"
+        Width: =280
+        X: =180
+        Y: =1055
+        ZIndex: =6
+
+    Rectangle1_20 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =2
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =1
+        Width: =634
+        X: =6
+        Y: =93
+        ZIndex: =7
+
+    Rectangle1_22 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =2
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =1
+        Width: =634
+        X: =6
+        Y: =1043
+        ZIndex: =8
+
+    Label1_7 As label:
+        Align: =Align.Center
+        Color: =RGBA(168, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =30
+        Text: ="POP-UP"
+        Width: =560
+        X: =40
+        Y: =110
+        ZIndex: =9
+
+    Rectangle1_21 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =2
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =1
+        Width: =634
+        X: =6
+        Y: =202
+        ZIndex: =10
+
+    POPupbtn As button:
+        Height: =70
+        OnSelect: =Set(_popup,true)
+        Size: =24
+        Text: ="Show POP-up"
+        Width: =280
+        X: =196
+        Y: =352
+        ZIndex: =11
+
+    Rectangle2 As rectangle:
+        BorderThickness: =1
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =395
+        Visible: =_popup
+        Width: =452
+        X: =98
+        Y: =502
+        ZIndex: =12
+
+    Button3 As button:
+        Height: =62
+        OnSelect: =Set(_popup,false)
+        Size: =24
+        Text: ="Close"
+        Visible: =_popup
+        X: =333
+        Y: =793
+        ZIndex: =15
+
+    Button3_1 As button:
+        Height: =62
+        OnSelect: |
+            =//Patch(product12_def,Defaults(product12_def),{Pro_no:TextInput4.Text});
+            If(
+                !IsBlank(TextInput4.Text),
+                Patch(
+                    product12_def,
+                    Defaults(product12_def),
+                    {Pro_no: TextInput4.Text}
+                )
+            );
+            If(
+                !IsBlank(TextInput4.Text),
+                Set(
+                    _popup,
+                    false
+                )
+            );
+            UpdateIf(
+                product12_def,
+                TextInput4.Text = Pro_no,
+                {Pro_Status: "Extra"}
+            );
+            
+            
+            Reset(TextInput4);
+        Size: =24
+        Text: ="Save"
+        Visible: =_popup
+        X: =121
+        Y: =793
+        ZIndex: =16
+
+    BarcodeScanner1 As barcodeScanner:
+        Height: =57
+        OnScan: |
+            =Set(varcar,BarcodeScanner1.Value);
+        Size: =24
+        Text: ="Scan"
+        Visible: =_popup
+        Width: =187
+        X: =215
+        Y: =548
+        ZIndex: =17
+
+    TextInput4 As text:
+        Default: =
+        Fill: =WhiteSmoke
+        Height: =70
+        Size: =21
+        TabIndex: =
+        Visible: =_popup
+        Width: =334
+        X: =136
+        Y: =664
+        ZIndex: =18
+
+    Label8 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        Height: =44
+        Size: =40
+        Text: =If(!IsBlank(TextInput4.Text),"","*")
+        Visible: |-
+            =
+            _popup
+        Width: =41
+        X: =493
+        Y: =677
+        ZIndex: =19
+

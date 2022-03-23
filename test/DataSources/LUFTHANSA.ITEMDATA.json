@@ -1,0 +1,24 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_oracle",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-03-08T17:21:43.0360000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "BINID": "BINID",
+      "ITEMBARCODESRNO": "ITEMBARCODESRNO",
+      "ITEMDESCRIPTION": "ITEMDESCRIPTION",
+      "ITEMID": "ITEMID",
+      "ITEMNAME": "ITEMNAME",
+      "ITEMSTATUS": "ITEMSTATUS"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "LUFTHANSA.ITEMDATA",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

@@ -1,0 +1,69 @@
+Screen1 As screen:
+
+    BarcodeScanner4 As barcodeScanner:
+        Height: =70
+        OnScan: |
+            =Set(
+                binscanbarcodeno,
+                BarcodeScanner4.Value
+            );
+            ClearCollect(
+                GetBinValues,
+                Filter(
+                    'LUFTHANSA.BINDATA',
+                    BINBARCODESRNO = binscanbarcodeno
+                )
+            );
+            Set(
+                binid,
+                First(GetBinValues).BINID
+            );
+            ClearCollect(
+                GetBinItemValues,
+                Filter(
+                    'LUFTHANSA.ITEMDATA',
+                    BINID = binid
+                )
+            );
+            Set(
+                filterBarcode,
+                Filter(
+                    GetBinItemValues,
+                    Not(ITEMBARCODESRNO in new_list.ItemBarcodeSrNo)
+                )
+            );
+            ForAll(
+                filterBarcode,
+                Patch(
+                    new_list,
+                    Defaults(
+                        Filter(
+                            new_list,
+                            Not(ITEMBARCODESRNO in ItemBarcodeSrNo)
+                        )
+                    ),
+                    {
+                        Title: "Scan Item Data",
+                        ItemBarcodeSrNo: ITEMBARCODESRNO,
+                        ItemName: ITEMNAME,
+                        ItemDescription: ITEMDESCRIPTION,
+                        ItemStatus: ITEMSTATUS,
+                        BinId: BINID
+                    }
+                )
+            );
+            ClearCollect(
+                GetBinItemValues,
+                Filter(
+                    new_list,
+                    BinId = binid
+                )
+            );
+            Navigate(DisplayItem);
+        Size: =24
+        Text: ="Scan"
+        Width: =280
+        X: =156
+        Y: =516
+        ZIndex: =1
+

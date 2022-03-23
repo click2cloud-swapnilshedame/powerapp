@@ -1,0 +1,102 @@
+Delivery As screen:
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        BorderThickness: =2
+        Height: =245
+        Items: ='LUFTHANSA.DEMO'
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(104, Self.Height - 60)
+        Y: =818
+        ZIndex: =1
+
+        Title3 As label:
+            BorderThickness: =1
+            Height: =30
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.ITEM_ID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =44
+            X: =16
+            Y: =22
+            ZIndex: =1
+
+        Subtitle3 As label:
+            BorderThickness: =1
+            Height: =41
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.BARCODE_ITEM
+            VerticalAlign: =VerticalAlign.Top
+            Width: =231
+            X: =32
+            Y: =Title3.Y + Title3.Height + 4
+            ZIndex: =2
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator3 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
+    BarcodeScanner2 As barcodeScanner:
+        Height: =70
+        OnScan: |-
+            =Set(
+            location123,
+            BarcodeScanner2.Value
+            );
+            Collect(
+            GetLocation123,
+            Filter(
+            'LUFTHANSA.DEMO',
+            BARCODE_ITEM = location123
+            )
+            );
+            LookUp(
+                'LUFTHANSA.DEMO'.BARCODE_ITEM,BARCODE_ITEM=location123,
+                Patch(Demo_Tra, Defaults(Demo_Tra),
+                {Barcode_NO:BARCODE_ITEM}
+                ));
+            
+            //Patch(Demo_Tra, Defaults(Demo_Tra), {Barcode_NO:location123});
+        Size: =24
+        Text: ="Scan"
+        Width: =280
+        X: =180
+        Y: =540
+        ZIndex: =2
+
+    TextInput1 As text:
+        Default: =location123
+        Height: =70
+        Size: =21
+        Width: =560
+        X: =52
+        Y: =162
+        ZIndex: =3
+

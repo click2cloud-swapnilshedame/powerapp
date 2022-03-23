@@ -1,0 +1,21 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_oracle",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-03-08T17:21:43.0360000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "BARCODE_ITEM": "BARCODE_ITEM",
+      "ITEM_ID": "ITEM_ID",
+      "PRODUCT1": "PRODUCT1"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "LUFTHANSA.DEMO",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

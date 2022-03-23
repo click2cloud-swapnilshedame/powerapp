@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "32641735-f4bd-4513-9d32-39e60b1ba1e5",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "Powerapp-Responce-Demo_1",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "8b2ce86e-b77a-4840-abb8-0f11d03db664",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "getproductioncategory_1",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

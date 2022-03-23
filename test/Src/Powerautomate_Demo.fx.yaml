@@ -1,0 +1,63 @@
+Powerautomate_Demo As screen:
+
+    Btn_Hello As button:
+        Height: =70
+        OnSelect: =Set(var_hello,'Powerapp-Responce-Demo_1'.Run("Shedame").hellomessage)
+        Size: =24
+        Text: ="Hello"
+        Width: =280
+        X: =62
+        Y: =170
+        ZIndex: =1
+
+    Label7 As label:
+        Height: =70
+        Size: =21
+        Text: =var_hello
+        Width: =252
+        X: =387
+        Y: =170
+        ZIndex: =2
+
+    btn_sum As button:
+        Height: =70
+        OnSelect: =Set(var_sum, AddNumber.Run(50,40).Sum)
+        Size: =24
+        Text: ="Sum"
+        Width: =280
+        X: =62
+        Y: =332
+        ZIndex: =3
+
+    Label7_1 As label:
+        Height: =70
+        Size: =21
+        Text: =var_sum
+        Width: =207
+        X: =387
+        Y: =332
+        ZIndex: =4
+
+    btn_SP As button:
+        Height: =70
+        OnSelect: |-
+            =Set(
+                var_SP,
+                getproductioncategory_1.Run("Automate").products
+            )
+        Size: =24
+        Text: ="SP"
+        Width: =280
+        X: =62
+        Y: =493
+        ZIndex: =5
+
+    Dropdown1 As dropdown:
+        Height: =70
+        Items: =var_SP
+        Size: =21
+        Width: =253
+        X: =387
+        Y: =493
+        ZIndex: =6
+

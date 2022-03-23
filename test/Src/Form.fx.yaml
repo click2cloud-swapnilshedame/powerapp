@@ -1,0 +1,19 @@
+Form As screen:
+
+    Form1 As form:
+        DataSource: =GetLocationValues
+        Width: =640
+        Y: =136
+        ZIndex: =1
+
+        DataCard1 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            DisplayName: =ThisItem.Bin
+            Fill: =White
+            Height: =470
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+

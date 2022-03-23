@@ -1,0 +1,204 @@
+Item_Scan_duplicate As screen:
+
+    back_btn_8 As button:
+        Align: =Align.Left
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =57
+        OnSelect: =Navigate(Scan_Item)
+        Size: =24
+        Text: ="< Back"
+        Width: =135
+        X: =6
+        Y: =22
+        ZIndex: =1
+
+    Close_btn_8 As button:
+        Align: =Align.Right
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =57
+        OnSelect: =Refresh([Scan_Item])
+        Size: =24
+        Text: ="X Close"
+        Width: =152
+        X: =470
+        Y: =22
+        ZIndex: =2
+
+    Mytask_btn_3 As button:
+        Align: =Align.Left
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =57
+        Size: =24
+        Text: ="Report"
+        Width: =170
+        X: =26
+        Y: =968
+        ZIndex: =3
+
+    Status_btn_3 As button:
+        Align: =Align.Left
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =61
+        Size: =24
+        Text: ="Add Remarks"
+        Width: =233
+        X: =389
+        Y: =968
+        ZIndex: =5
+
+    Rectangle1_23 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =2
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =1
+        Width: =634
+        X: =6
+        Y: =93
+        ZIndex: =7
+
+    Rectangle1_25 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =2
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =1
+        Width: =634
+        X: =6
+        Y: =1043
+        ZIndex: =8
+
+    Label1_8 As label:
+        Align: =Align.Center
+        Color: =RGBA(168, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =30
+        Text: ="ITEM SCAN"
+        Width: =560
+        X: =40
+        Y: =120
+        ZIndex: =9
+
+    Rectangle1_24 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =2
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =1
+        Width: =634
+        X: =6
+        Y: =198
+        ZIndex: =10
+
+    "Gallery1_2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Fill: =White
+        Height: =410
+        Items: =getvar
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =73
+        Y: =315
+        ZIndex: =11
+
+        Subtitle2_2 As label:
+            Color: =RGBA(151, 0, 0, 1)
+            Height: =39
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.location
+            VerticalAlign: =VerticalAlign.Top
+            Width: =241
+            X: =181
+            Y: =19
+            ZIndex: =2
+
+        Body1_2 As label:
+            BorderColor: =RGBA(168, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Bin
+            VerticalAlign: =VerticalAlign.Top
+            Width: =156
+            X: =25
+            Y: =19
+            ZIndex: =3
+
+        Separator2_2 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Circle1_1 As circle:
+            Fill: |
+                =//ForAll(GetLocationValues,If(Or(ThisItem.Bin="Done",ThisItem.location=locationscanvalue1),Green,Red)
+                If(Or(ThisItem.Bin="Done",ThisItem.location=locationscanvalue1),Green,Red)
+            Height: =36
+            OnSelect: =Select(Parent)
+            Width: =35
+            X: =482
+            Y: =20
+            ZIndex: =8
+
+    Label4_9 As label:
+        Color: =RGBA(0, 121, 187, 1)
+        Height: =75
+        Size: =21
+        Text: ="Bin"
+        Width: =115
+        X: =26
+        Y: =240
+        ZIndex: =12
+
+    Label4_10 As label:
+        Color: =RGBA(0, 121, 187, 1)
+        Height: =75
+        Size: =21
+        Text: ="Location"
+        Width: =168
+        X: =221
+        Y: =240
+        ZIndex: =13
+
+    Label4_11 As label:
+        Color: =RGBA(0, 121, 187, 1)
+        Height: =75
+        Size: =21
+        Text: ="Status"
+        Width: =115
+        X: =460
+        Y: =240
+        ZIndex: =14
+
+    BarcodeScanner3 As barcodeScanner:
+        Height: =70
+        OnScan: |-
+            =Set(
+                locationscanvalue1,
+                BarcodeScanner3.Value);
+            Collect(getvar,
+            Filter(
+                Locations,
+                location=locationscanvalue1));
+        Size: =24
+        Text: ="Scan"
+        Width: =280
+        X: =160
+        Y: =111
+        ZIndex: =16
+

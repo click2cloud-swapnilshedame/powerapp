@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "4cff7251-a9a8-4c0a-acce-8b872bedefb9",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "AddNumber",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

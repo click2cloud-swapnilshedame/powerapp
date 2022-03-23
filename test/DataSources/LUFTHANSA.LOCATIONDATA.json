@@ -1,0 +1,21 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_oracle",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-03-08T17:21:43.0360000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "LOCATIONBARCODESRNO": "LOCATIONBARCODESRNO",
+      "LOCATIONID": "LOCATIONID",
+      "LOCATIONNAME": "LOCATIONNAME"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "LUFTHANSA.LOCATIONDATA",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

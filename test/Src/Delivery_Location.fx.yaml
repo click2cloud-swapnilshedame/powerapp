@@ -1,0 +1,160 @@
+Delivery_Location As screen:
+    OnVisible: =Set(varScan,"")
+
+    back_btn As button:
+        Align: =Align.Left
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =57
+        Size: =24
+        Text: ="< Back"
+        Width: =135
+        X: =6
+        Y: =22
+        ZIndex: =1
+
+    Close_btn As button:
+        Align: =Align.Right
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =57
+        OnSelect: =Navigate(Item_Scan_duplicate)
+        Size: =24
+        Text: ="X Close"
+        Width: =152
+        X: =470
+        Y: =22
+        ZIndex: =2
+
+    Mytask_btn As button:
+        Align: =Align.Left
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =57
+        Size: =24
+        Text: ="MyTask"
+        Width: =170
+        X: =26
+        Y: =1059
+        ZIndex: =3
+
+    Status_btn As button:
+        Align: =Align.Left
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =65
+        Size: =24
+        Text: ="Status"
+        Width: =145
+        X: =477
+        Y: =1055
+        ZIndex: =4
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =2
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =1
+        Width: =634
+        X: =6
+        Y: =93
+        ZIndex: =5
+
+    Rectangle1_1 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =2
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =1
+        Width: =634
+        X: =6
+        Y: =1043
+        ZIndex: =6
+
+    Label2 As label:
+        Align: =Align.Center
+        Color: =RGBA(39, 113, 194, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =297
+        Size: =40
+        Text: ="SCAN Delivery Location"
+        Width: =560
+        X: =43
+        Y: =247
+        ZIndex: =7
+
+    Label3 As label:
+        Height: =145
+        Size: =21
+        Text: =locationscanvalue
+        Width: =560
+        X: =43
+        Y: =607
+        ZIndex: =8
+
+    BarcodeScanner1_6 As barcodeScanner:
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnScan: |-
+            =Set(
+                locationscanvalue,
+                BarcodeScanner1_6.Value
+            );
+            Collect(
+                GetLocationValues,
+                Filter(
+                    Locations,
+                    Srno = locationscanvalue
+                )
+            );
+            Navigate(
+                Scan_Item,
+                ScreenTransition.Fade,
+                {selectedItemSn: First(GetLocationValues).location}
+            );
+            Set(getspinner,!getspinner)
+        Size: =24
+        Text: ="Scan"
+        Width: =280
+        X: =183
+        Y: =1055
+        ZIndex: =9
+
+    Image2 As image:
+        Height: =320
+        Image: =
+        Width: =320
+        X: =183
+        Y: =359
+        ZIndex: =10
+
+    SpinnerGrup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Rectangle3 As rectangle:
+            BorderColor: =Self.Fill
+            BorderThickness: =4
+            Fill: =RGBA(255, 255, 255, 0.84)
+            Height: =1136
+            Visible: =getspinner
+            Width: =640
+            ZIndex: =11
+
+        Image4 As image:
+            Height: =320
+            Image: ='Spinner-1s-200px'
+            Visible: =getspinner
+            Width: =320
+            X: =150
+            Y: =325
+            ZIndex: =12
+

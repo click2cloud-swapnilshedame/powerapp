@@ -1,0 +1,11 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(getspinner,true);
+        
+        
+        
+        
+        
+        Set(getspinner,false);
+
