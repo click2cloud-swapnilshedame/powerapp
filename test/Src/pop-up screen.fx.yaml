@@ -192,8 +192,10 @@
 
     TextInput4 As text:
         Default: =
+        DisabledBorderColor: =RGBA(255, 255, 255, 1)
         Fill: =WhiteSmoke
         Height: =70
+        LineHeight: =1.3
         Size: =21
         TabIndex: =
         Visible: =_popup

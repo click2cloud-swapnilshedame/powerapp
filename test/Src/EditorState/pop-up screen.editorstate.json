@@ -3644,7 +3644,14 @@
       "VirtualKeyboardMode",
       "DelayOutput",
       "BorderColor",
-      "DisabledBorderColor",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "",
+        "InvariantPropertyName": "DisabledBorderColor",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
       "PressedBorderColor",
       "HoverBorderColor",
       "BorderStyle",
@@ -3696,6 +3703,14 @@
         "AutoRuleBindingEnabled": false,
         "AutoRuleBindingString": "0",
         "InvariantPropertyName": "TabIndex",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "1.2",
+        "InvariantPropertyName": "LineHeight",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
       }
@@ -3911,6 +3926,11 @@
       {
         "Category": "Design",
         "PropertyName": "TabIndex",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "PropertyName": "LineHeight",
         "RuleProviderType": "Unknown"
       }
     ],
