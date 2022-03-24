@@ -139,7 +139,7 @@
 
     Button3_1 As button:
         DisplayMode: |
-            =If(IsBlank((TextInput4.Text)&(TextInput7.Text)), DisplayMode.Disabled, DisplayMode.Edit)
+            =If(IsBlank((TextInput4.Text)&&(TextInput7.Text)), DisplayMode.Disabled, DisplayMode.Edit)
         Height: =62
         OnSelect: |
             =//Patch(product12_def,Defaults(product12_def),{Pro_no:TextInput4.Text});
