@@ -127,6 +127,7 @@
         ZIndex: =12
 
     Button3 As button:
+        DisplayMode: =If(!IsBlank(TextInput4.Text), DisplayMode.Disabled, DisplayMode.Edit)
         Height: =62
         OnSelect: =Set(_popup,false)
         Size: =24
