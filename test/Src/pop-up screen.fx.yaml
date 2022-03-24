@@ -138,8 +138,13 @@
         ZIndex: =15
 
     Button3_1 As button:
-        DisplayMode: |
-            =If(IsBlank((TextInput4.Text)&&(TextInput7.Text)), DisplayMode.Disabled, DisplayMode.Edit)
+        DisplayMode: |-
+            =If(
+                   IsBlank(TextInput4.Text),
+                    DisplayMode.Disabled,
+                    DisplayMode.Edit
+                
+            )
         Height: =62
         OnSelect: |
             =//Patch(product12_def,Defaults(product12_def),{Pro_no:TextInput4.Text});
@@ -193,8 +198,8 @@
         TabIndex: =
         Visible: =_popup
         Width: =334
-        X: =157
-        Y: =618
+        X: =159
+        Y: =651
         ZIndex: =18
 
     Label8 As label:
@@ -209,14 +214,4 @@
         X: =493
         Y: =670
         ZIndex: =19
-
-    TextInput7 As text:
-        Default: =
-        Height: =49
-        Size: =21
-        Visible: =_popup
-        Width: =334
-        X: =157
-        Y: =699
-        ZIndex: =20
 
