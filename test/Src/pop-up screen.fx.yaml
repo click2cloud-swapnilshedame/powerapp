@@ -193,7 +193,7 @@
     TextInput4 As text:
         Default: =
         DisabledBorderColor: =RGBA(175, 191, 224, 1)
-        DisabledFill: =RGBA(255, 255, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         Fill: =WhiteSmoke
         Height: =70
         HoverBorderColor: =RGBA(50, 86, 160, 1)
