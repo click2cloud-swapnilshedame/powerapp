@@ -3653,7 +3653,14 @@
         "NameMapSourceSchema": "?"
       },
       "PressedBorderColor",
-      "HoverBorderColor",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "",
+        "InvariantPropertyName": "HoverBorderColor",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
       "BorderStyle",
       "FocusedBorderColor",
       "Color",
