@@ -112,13 +112,17 @@ Delivery_Location As screen:
                     Srno = locationscanvalue
                 )
             );
-            
-            Navigate(
-                Scan_Item,
-                ScreenTransition.Fade,
-                {selectedItemSn: First(GetLocationValues).location}
+            If(locationscanvalue in Locations.Srno,
+                Navigate(
+                    Scan_Item,
+                    ScreenTransition.Fade,
+                    {selectedItemSn: First(GetLocationValues).location}
+                ),
+                Set(
+                    _messagedisplay,
+                    true
+                )
             );
-            Set(_messagedisplay,true);
         Size: =24
         Text: ="Scan"
         Width: =280
