@@ -126,14 +126,6 @@ Delivery_Location As screen:
         Y: =1055
         ZIndex: =9
 
-    Image2 As image:
-        Height: =320
-        Image: =
-        Width: =320
-        X: =183
-        Y: =359
-        ZIndex: =10
-
     Message_display As group:
         Height: =5
         Width: =5
