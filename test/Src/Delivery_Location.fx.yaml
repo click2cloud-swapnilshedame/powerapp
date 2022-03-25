@@ -1,8 +1,7 @@
 Delivery_Location As screen:
     LoadingSpinner: =LoadingSpinner.Data
-    OnVisible: |-
+    OnVisible: |
         =Set(varScan,"");
-        UpdateContext({varloading:false});
 
     back_btn As button:
         Align: =Align.Left
