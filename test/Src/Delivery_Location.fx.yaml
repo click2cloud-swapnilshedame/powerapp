@@ -100,7 +100,7 @@ Delivery_Location As screen:
         Color: =RGBA(39, 113, 194, 1)
         Fill: =WhiteSmoke
         Height: =70
-        OnScan: |-
+        OnScan: |
             =Set(
                 locationscanvalue,
                 BarcodeScanner1_6.Value
@@ -112,12 +112,12 @@ Delivery_Location As screen:
                     Srno = locationscanvalue
                 )
             );
+            If(locationscanvalue=BarcodeScanner1_6.Value,Navigate(Scan_Item),Set(_messagedisplay,true));
             Navigate(
                 Scan_Item,
                 ScreenTransition.Fade,
                 {selectedItemSn: First(GetLocationValues).location}
             );
-            Set(getspinner,!getspinner)
         Size: =24
         Text: ="Scan"
         Width: =280
@@ -157,4 +157,42 @@ Delivery_Location As screen:
             X: =150
             Y: =325
             ZIndex: =12
+
+    Message_display As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =16
+
+        Rectangle4 As rectangle:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =337
+            Width: =560
+            X: =43
+            Y: =342
+            ZIndex: =13
+
+        Button5 As button:
+            Fill: =RGBA(102, 182, 227, 1)
+            Height: =62
+            OnSelect: =Set(_messagedisplay,false)
+            Size: =24
+            Text: ="OK"
+            Width: =152
+            X: =233
+            Y: =583
+            ZIndex: =14
+
+        Label9 As label:
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =195
+            Size: =35
+            Text: ="Barcode Not Match..!!"
+            Width: =497
+            X: =63
+            Y: =347
+            ZIndex: =15
 

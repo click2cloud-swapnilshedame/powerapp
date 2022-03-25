@@ -951,6 +951,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App._messagedisplay"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App._messagedisplay",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "_messagedisplay",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Scan_Item.selectedItemSn"
                 }
               ],
