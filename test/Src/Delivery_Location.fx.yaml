@@ -169,6 +169,7 @@ Delivery_Location As screen:
             BorderThickness: =1
             Fill: =RGBA(255, 255, 255, 1)
             Height: =337
+            Visible: =_messagedisplay
             Width: =560
             X: =43
             Y: =342
@@ -180,6 +181,7 @@ Delivery_Location As screen:
             OnSelect: =Set(_messagedisplay,false)
             Size: =24
             Text: ="OK"
+            Visible: =_messagedisplay
             Width: =152
             X: =233
             Y: =583
@@ -191,6 +193,7 @@ Delivery_Location As screen:
             Height: =195
             Size: =35
             Text: ="Barcode Not Match..!!"
+            Visible: =_messagedisplay
             Width: =497
             X: =63
             Y: =347
