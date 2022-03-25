@@ -112,12 +112,15 @@ Delivery_Location As screen:
                     Srno = locationscanvalue
                 )
             );
-            If(locationscanvalue=BarcodeScanner1_6.Value,Navigate(Scan_Item),Set(_messagedisplay,true));
+            
+            
+            
             Navigate(
                 Scan_Item,
                 ScreenTransition.Fade,
                 {selectedItemSn: First(GetLocationValues).location}
             );
+            Set(_messagedisplay,true);
         Size: =24
         Text: ="Scan"
         Width: =280
