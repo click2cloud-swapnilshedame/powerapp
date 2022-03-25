@@ -134,6 +134,14 @@ Delivery_Location As screen:
         Y: =1055
         ZIndex: =9
 
+    Rectangle3 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =1125
+        Visible: =varloading
+        Width: =634
+        X: =6
+        ZIndex: =13
+
     Image2 As image:
         Height: =320
         Image: ='Spinner-1s-200px'
@@ -141,7 +149,7 @@ Delivery_Location As screen:
         Width: =320
         X: =157
         Y: =645
-        ZIndex: =16
+        ZIndex: =14
 
     Message_display As group:
         Height: =5
@@ -158,7 +166,7 @@ Delivery_Location As screen:
             Width: =560
             X: =43
             Y: =342
-            ZIndex: =13
+            ZIndex: =10
 
         Button5 As button:
             Fill: =RGBA(102, 182, 227, 1)
@@ -170,7 +178,7 @@ Delivery_Location As screen:
             Width: =152
             X: =233
             Y: =583
-            ZIndex: =14
+            ZIndex: =11
 
         Label9 As label:
             Font: =Font.Arial
@@ -182,5 +190,5 @@ Delivery_Location As screen:
             Width: =497
             X: =63
             Y: =347
-            ZIndex: =15
+            ZIndex: =12
 

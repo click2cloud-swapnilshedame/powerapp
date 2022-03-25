@@ -157,6 +157,7 @@
     "Rectangle2": 24,
     "Rectangle2_1": 152,
     "Rectangle2_2": 61,
+    "Rectangle3": 191,
     "Rectangle4": 8,
     "Scan_Item": 127,
     "Screen1": 175,
@@ -192,7 +193,7 @@
     "Title7": 181
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "03/25/2022 08:40:32",
+  "HeaderLastSavedDateTimeUTC": "03/25/2022 08:47:21",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
@@ -411,6 +412,7 @@
     "Rectangle2": 139,
     "Rectangle2_1": 159,
     "Rectangle2_2": 89,
+    "Rectangle3": 0,
     "Rectangle4": 4,
     "Scan_Item": 0,
     "Screen1": 0,
