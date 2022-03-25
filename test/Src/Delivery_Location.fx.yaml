@@ -1,5 +1,4 @@
 Delivery_Location As screen:
-    LoadingSpinner: =LoadingSpinner.Data
     OnVisible: =Set(varScan,"")
 
     back_btn As button:
