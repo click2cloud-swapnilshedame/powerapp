@@ -1,6 +1,8 @@
 Delivery_Location As screen:
     LoadingSpinner: =LoadingSpinner.Data
-    OnVisible: =Set(varScan,"")
+    OnVisible: |-
+        =Set(varScan,"");
+        UpdateContext({varloading:false});
 
     back_btn As button:
         Align: =Align.Left
@@ -102,7 +104,8 @@ Delivery_Location As screen:
         Fill: =WhiteSmoke
         Height: =70
         OnScan: |
-            =Set(
+            =UpdateContext({varloading:true});
+            Set(
                 locationscanvalue,
                 BarcodeScanner1_6.Value
             );
@@ -130,6 +133,15 @@ Delivery_Location As screen:
         X: =183
         Y: =1055
         ZIndex: =9
+
+    Image2 As image:
+        Height: =320
+        Image: ='Spinner-1s-200px'
+        Visible: =varloading
+        Width: =320
+        X: =157
+        Y: =645
+        ZIndex: =16
 
     Message_display As group:
         Height: =5

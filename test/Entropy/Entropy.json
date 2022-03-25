@@ -76,6 +76,7 @@
     "Icon3": 57,
     "Image1": 77,
     "Image1_1": 91,
+    "Image2": 190,
     "Item_Scan": 155,
     "Item_Scan_duplicate": 98,
     "Item_Tracking": 117,
@@ -191,7 +192,7 @@
     "Title7": 181
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "03/25/2022 06:55:02",
+  "HeaderLastSavedDateTimeUTC": "03/25/2022 07:08:43",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
@@ -240,18 +241,18 @@
   },
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "barcodeScanner": 3,
+    "barcodeScanner": 4,
     "button": 0,
-    "camera": 7,
+    "camera": 8,
     "circle": 10,
     "dropdown": 11,
-    "gallery": 5,
-    "icon": 6,
-    "image": 9,
-    "inkControl": 8,
-    "label": 2,
-    "rectangle": 1,
-    "text": 4
+    "gallery": 6,
+    "icon": 7,
+    "image": 1,
+    "inkControl": 9,
+    "label": 3,
+    "rectangle": 2,
+    "text": 5
   },
   "PublishOrderIndices": {
     "App": 0,
@@ -329,6 +330,7 @@
     "Icon3": 84,
     "Image1": 103,
     "Image1_1": 116,
+    "Image2": 0,
     "Item_Scan": 0,
     "Item_Scan_duplicate": 0,
     "Item_Tracking": 0,
