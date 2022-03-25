@@ -113,8 +113,6 @@ Delivery_Location As screen:
                 )
             );
             
-            
-            
             Navigate(
                 Scan_Item,
                 ScreenTransition.Fade,
