@@ -135,7 +135,7 @@ Delivery_Location As screen:
         ZIndex: =9
 
     Rectangle3 As rectangle:
-        Fill: =RGBA(0, 0, 0, 0.5)
+        Fill: =RGBA(242,242,243,244)
         Height: =1125
         Visible: =varloading
         Width: =634
@@ -144,7 +144,7 @@ Delivery_Location As screen:
 
     Image2 As image:
         Height: =320
-        Image: ='Spinner-1s-200px'
+        Image: ='1'
         Visible: =varloading
         Width: =320
         X: =157
