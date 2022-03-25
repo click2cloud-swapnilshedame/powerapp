@@ -103,7 +103,7 @@ Delivery_Location As screen:
         Color: =RGBA(39, 113, 194, 1)
         Fill: =WhiteSmoke
         Height: =70
-        OnScan: |
+        OnScan: |-
             =UpdateContext({varloading:true});
             Set(
                 locationscanvalue,
@@ -127,6 +127,7 @@ Delivery_Location As screen:
                     true
                 )
             );
+            UpdateContext({varloading:false});
         Size: =24
         Text: ="Scan"
         Width: =280
