@@ -7,8 +7,8 @@ powerautomate As screen:
         Size: =24
         Text: ="Button"
         Width: =280
-        X: =165
-        Y: =319
+        X: =203
+        Y: =131
         ZIndex: =1
 
     Rectangle2_1 As rectangle:
@@ -47,11 +47,11 @@ powerautomate As screen:
         ZIndex: =4
 
     Label6 As label:
-        Height: =109
+        Height: =41
         Size: =21
         Text: ="Are you sure to confirm"
-        Width: =417
-        X: =142
-        Y: =428
+        Width: =322
+        X: =182
+        Y: =329
         ZIndex: =5
 
