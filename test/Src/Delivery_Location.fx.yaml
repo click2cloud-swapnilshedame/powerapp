@@ -154,7 +154,7 @@ Delivery_Location As screen:
     Image4 As image:
         Height: =131
         Image: ='bar-code'
-        OnSelect: =Navigate(BarcodeScanner1_6)
+        OnSelect: =Select(BarcodeScanner1_6)
         Width: =137
         X: =207
         Y: =724
