@@ -133,6 +133,7 @@
         Height: =62
         OnSelect: |-
             =UpdateContext({Labeltext:"hello"});
+             UpdateContext({hasbeenpressed: true});
             
             
             Set(_popup,false);
@@ -239,9 +240,10 @@
     Button6 As button:
         Height: =70
         OnSelect: |
-            =UpdateContext({Labeltext:""});
+            =
         Size: =24
         Text: ="Button"
+        Visible: =hasbeenpressed
         Width: =280
         X: =273
         Y: =957
