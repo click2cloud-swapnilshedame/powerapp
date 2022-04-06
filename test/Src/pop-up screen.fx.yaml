@@ -238,6 +238,8 @@
 
     Button6 As button:
         Height: =70
+        OnSelect: |
+            =UpdateContext({Labeltext:""});
         Size: =24
         Text: ="Button"
         Width: =280
