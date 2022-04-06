@@ -240,12 +240,23 @@
     Button6 As button:
         Height: =70
         OnSelect: |
-            =
+            =UpdateContext({Labeltext:""});
         Size: =24
         Text: ="Button"
         Visible: =hasbeenpressed
         Width: =280
-        X: =273
-        Y: =957
+        X: =165
+        Y: =952
         ZIndex: =21
+
+    Button7 As button:
+        Height: =75
+        OnSelect: |
+            = UpdateContext({hasbeenpressed: false});
+        Size: =24
+        Text: ="Button"
+        Width: =127
+        X: =512
+        Y: =952
+        ZIndex: =22
 
