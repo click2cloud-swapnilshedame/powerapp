@@ -131,7 +131,11 @@
         BorderThickness: =3
         DisplayMode: =If(!IsBlank(TextInput4.Text), DisplayMode.Disabled, DisplayMode.Edit)
         Height: =62
-        OnSelect: =Set(_popup,false)
+        OnSelect: |-
+            =UpdateContext({Labeltext:"hello"});
+            
+            
+            Set(_popup,false);
         Size: =24
         Text: ="Close"
         Visible: =_popup
@@ -222,4 +226,22 @@
         X: =493
         Y: =670
         ZIndex: =19
+
+    Label10 As label:
+        Height: =75
+        Size: =21
+        Text: =Labeltext
+        Width: =183
+        X: =26
+        Y: =952
+        ZIndex: =20
+
+    Button6 As button:
+        Height: =70
+        Size: =24
+        Text: ="Button"
+        Width: =280
+        X: =273
+        Y: =957
+        ZIndex: =21
 
