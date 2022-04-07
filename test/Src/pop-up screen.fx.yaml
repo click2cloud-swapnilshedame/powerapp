@@ -267,6 +267,7 @@
         Default: =varcar
         Height: =70
         Size: =21
+        Visible: =_popup
         Width: =353
         X: =159
         Y: =695
