@@ -213,7 +213,7 @@
         Visible: =_popup
         Width: =334
         X: =159
-        Y: =651
+        Y: =625
         ZIndex: =18
 
     Label8 As label:
@@ -226,7 +226,7 @@
             _popup
         Width: =41
         X: =493
-        Y: =670
+        Y: =644
         ZIndex: =19
 
     Label10 As label:
@@ -262,4 +262,13 @@
         X: =512
         Y: =952
         ZIndex: =22
+
+    TextInput5 As text:
+        Default: =varcar
+        Height: =70
+        Size: =21
+        Width: =353
+        X: =159
+        Y: =695
+        ZIndex: =23
 
