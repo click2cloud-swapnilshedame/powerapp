@@ -198,7 +198,7 @@
         ZIndex: =17
 
     TextInput4 As text:
-        Default: =BarcodeScanner1.Value
+        Default: =varcar
         DisabledBorderColor: =RGBA(175, 191, 224, 1)
         DisabledFill: =RGBA(255, 255, 255, 1)
         Fill: =WhiteSmoke
