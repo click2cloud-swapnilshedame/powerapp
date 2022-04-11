@@ -89,7 +89,7 @@ powerautomate As screen:
                 Demo_time,
                 Defaults(Demo_time),
                 {
-                    TimeOfDiff:Value( TextInput8_2.Text)
+                    TimeOfDiff:TextInput8_2.Text
                 }
                     
             )
