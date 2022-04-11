@@ -175,6 +175,7 @@
                 TextInput4.Text = Pro_no,
                 {Pro_Status: "Extra"}
             );
+            
             Reset(TextInput4);
         Size: =24
         Text: ="Save"

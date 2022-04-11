@@ -76,6 +76,24 @@
     ],
     "id": "138a5424-d183-435c-b4df-4de81a5b48d5"
   },
+  "3624eb5d-785e-4175-9455-4d8c81ca5d44": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_azuredatalake/connections/a84b16c27e1342639dcdf179842ae898",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Azure Data Lake",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1511/1.0.1511.2542/azuredatalake/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_azuredatalake"
+    },
+    "datasets": {},
+    "dataSources": [
+      "AzureDataLake"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "3624eb5d-785e-4175-9455-4d8c81ca5d44"
+  },
   "368880ca-920a-4c84-8700-9f8f16a1d8bd": {
     "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sql/connections/097ffb9288a549f1b59b49e3eb2a165a",
     "connectionParameters": {
@@ -97,11 +115,20 @@
     "datasets": {
       "192.168.1.218,Lufthansa": {
         "dataSources": {
+          "Demo_time": {
+            "tableName": "[dbo].[Demo_time]"
+          },
           "Demo_Tra": {
             "tableName": "[dbo].[Demo_Tra]"
           },
           "Locations": {
             "tableName": "[dbo].[Locations]"
+          },
+          "ManHoursActivity": {
+            "tableName": "[dbo].[ManHoursActivity]"
+          },
+          "ManHoursCapturing": {
+            "tableName": "[dbo].[ManHoursCapturing]"
           },
           "product_def": {
             "tableName": "[dbo].[product_def]"
@@ -116,7 +143,10 @@
       "product_def",
       "Demo_Tra",
       "Locations",
-      "product12_def"
+      "product12_def",
+      "ManHoursCapturing",
+      "ManHoursActivity",
+      "Demo_time"
     ],
     "dependencies": {},
     "dependents": [

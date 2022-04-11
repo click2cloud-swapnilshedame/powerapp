@@ -55,3 +55,48 @@ powerautomate As screen:
         Y: =329
         ZIndex: =5
 
+    TextInput8 As text:
+        Default: =
+        Height: =70
+        Size: =21
+        Width: =560
+        X: =30
+        Y: =389
+        ZIndex: =6
+
+    TextInput8_1 As text:
+        Default: =
+        Height: =70
+        Size: =21
+        Width: =560
+        X: =30
+        Y: =519
+        ZIndex: =7
+
+    TextInput8_2 As text:
+        Default: =TextInput8_1-TextInput8
+        Height: =70
+        Size: =21
+        Width: =560
+        X: =30
+        Y: =641
+        ZIndex: =8
+
+    Button4_1 As button:
+        Height: =70
+        OnSelect: |-
+            =Patch(
+                Demo_time,
+                Defaults(Demo_time),
+                {
+                    TimeOfDiff:Value( TextInput8.Text)
+                }
+                    
+            )
+        Size: =24
+        Text: ="Button"
+        Width: =280
+        X: =182
+        Y: =794
+        ZIndex: =9
+

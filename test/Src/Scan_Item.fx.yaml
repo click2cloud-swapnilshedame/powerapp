@@ -278,7 +278,16 @@ Scan_Item As screen:
         Height: =70
         Size: =21
         Width: =560
-        X: =15
-        Y: =759
+        X: =25
+        Y: =689
         ZIndex: =15
+
+    TextInput5 As text:
+        Default: =
+        Height: =70
+        Size: =21
+        Width: =560
+        X: =43
+        Y: =831
+        ZIndex: =16
 

@@ -1,0 +1,28 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sql",
+    "CdpRevision": {
+      "BaseUrl": "/v2",
+      "LastChangedTimeString": "2022-03-29T20:09:36.2180000Z",
+      "RevisionNumber": 2
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "BookOff": "BookOff",
+      "BookOn": "BookOn",
+      "Employee": "Employee",
+      "est_Hours": "est_Hours",
+      "est_Minutes": "est_Minutes",
+      "Id": "Id",
+      "Skill": "Skill",
+      "Status": "Status",
+      "TaskCard": "TaskCard",
+      "WO": "WO"
+    },
+    "DatasetName": "192.168.1.218,Lufthansa",
+    "EncodeDataset": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "ManHoursCapturing",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
