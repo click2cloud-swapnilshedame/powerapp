@@ -51,8 +51,8 @@ powerautomate As screen:
         Size: =21
         Text: ="Are you sure to confirm"
         Width: =322
-        X: =182
-        Y: =329
+        X: =161
+        Y: =236
         ZIndex: =5
 
     TextInput8 As text:
@@ -99,4 +99,13 @@ powerautomate As screen:
         X: =182
         Y: =794
         ZIndex: =9
+
+    Dropdown4 As dropdown:
+        Height: =70
+        Items: =Demo_time.Id
+        Size: =21
+        Width: =575
+        X: =34
+        Y: =298
+        ZIndex: =10
 
