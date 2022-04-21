@@ -155,9 +155,9 @@ Delivery_Location As screen:
         Height: =131
         Image: ='bar-code'
         OnSelect: =Select(BarcodeScanner1_6)
-        Width: =137
-        X: =254
-        Y: =716
+        Width: =95
+        X: =183
+        Y: =724
         ZIndex: =16
 
     Message_display As group:
