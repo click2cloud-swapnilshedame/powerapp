@@ -124,7 +124,7 @@ Screen2 As screen:
         ZIndex: =1
 
     "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Items: =city1
+        Items: =cityCollection1
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
@@ -146,7 +146,7 @@ Screen2 As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Value
+            Text: =ThisItem.locationbarcodesrno
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image8.Width - 104
             X: =Image8.X + Image8.Width + 24
@@ -160,7 +160,7 @@ Screen2 As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Value
+            Text: =ThisItem.locationid
             VerticalAlign: =VerticalAlign.Top
             Width: =Title9.Width
             X: =Title9.X
