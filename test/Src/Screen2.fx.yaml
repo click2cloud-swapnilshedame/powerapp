@@ -21,7 +21,7 @@ Screen2 As screen:
                 Collect(
                     cityCollection1,
                     {
-                        locationid: Last(
+                        itemid: Last(
                             FirstN(
                                 Split(
                                     Last(
@@ -38,7 +38,7 @@ Screen2 As screen:
                                 2
                             ).Result
                         ).Result,
-                        locationbarcodesrno: Last(
+                        location_Id: Last(
                             FirstN(
                                 Split(
                                     Last(
@@ -55,7 +55,24 @@ Screen2 As screen:
                                 2
                             ).Result
                         ).Result,
-                        locationname: Left(
+                        delivery_location: Last(
+                            FirstN(
+                                Split(
+                                    Last(
+                                        FirstN(
+                                            Split(
+                                                Result,
+                                                ","
+                                            ).Result,
+                                            3
+                                        ).Result
+                                    ).Result,
+                                    ":"
+                                ).Result,
+                                3
+                            ).Result
+                        ).Result,
+                        status: Left(
                             Last(
                                 FirstN(
                                     Split(
