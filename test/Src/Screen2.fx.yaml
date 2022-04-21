@@ -3,14 +3,7 @@ Screen2 As screen:
     Button8_1 As button:
         Height: =70
         OnSelect: |-
-            =Set(
-                responce1,
-                scan_flow.Run().json1
-            );
-            Collect(
-                city1,
-                responce1
-            );
+            =
             Set(
                 response1,
                 scan_flow.Run().json1
