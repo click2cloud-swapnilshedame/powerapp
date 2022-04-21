@@ -80,7 +80,7 @@ Delivery_Location As screen:
         Align: =Align.Center
         Color: =RGBA(39, 113, 194, 1)
         FontWeight: =FontWeight.Bold
-        Height: =505
+        Height: =398
         Size: =40
         Text: ="SCAN Delivery Location"
         Width: =560
@@ -130,8 +130,8 @@ Delivery_Location As screen:
         Size: =24
         Text: ="Scan"
         Width: =280
-        X: =183
-        Y: =708
+        X: =169
+        Y: =668
         ZIndex: =9
 
     Rectangle3 As rectangle:
@@ -156,8 +156,8 @@ Delivery_Location As screen:
         Image: ='bar-code'
         OnSelect: =Select(BarcodeScanner1_6)
         Width: =95
-        X: =183
-        Y: =724
+        X: =180
+        Y: =679
         ZIndex: =16
 
     Message_display As group:
@@ -200,4 +200,16 @@ Delivery_Location As screen:
             X: =63
             Y: =347
             ZIndex: =12
+
+    Button8 As button:
+        Height: =70
+        OnSelect: |-
+            =Set(responce1,scan_flow.Run().json1);
+            Collect(city1,responce1)
+        Size: =24
+        Text: ="Button"
+        Width: =280
+        X: =157
+        Y: =870
+        ZIndex: =18
 

@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "e8c37cdc-f0df-43d6-a88c-caa88e66bcce",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "scan_flow",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]
